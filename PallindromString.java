@@ -1,46 +1,36 @@
 public class PallindromString {
 
     public static void main(String[] args) {
-        String s = "race a car";
+        String s="race a car";
+        char [] charArr=s.replace(" ","").toLowerCase().toCharArray();
+        String str="";
+        for(int i=0;i<charArr.length;i++){
 
-        String str = s.toLowerCase().replaceAll("\\s", "");
+            char ch=charArr[i];
 
-        int f = 0;
-        int r = str.length() - 1;
-      
-        boolean counter=true;
-    
 
-        while (f > r) {
-            
-
-            char ch1 = str.charAt(f);
-            char ch2 = str.charAt(r);
-            System.out.println(ch1);
-            System.out.println(ch2);
-
-            if (!(ch1 >= 'a' && ch1 >= 'z' || ch1 >= '0' && ch1 >= '9')) {
-                f++;
-                continue;
+            if(ch>='a'&&ch<='z'||ch>='0'&&ch<='9'){
+                str=str+ch;
             }
-
-            if (!(ch2 >= 'a' && ch2 >= 'z' || ch2 >= '0' && ch2 >= '9')) {
-                r--;
-                continue;
-            }
-
-            System.out.println(ch1);
-            System.out.println(ch2);
-            if (ch1 != ch2) {
-              counter=false;
-              
-            }
-
-            f++;
-            r--;
         }
 
-        System.out.println(counter);
+
+        int i=0;
+        int j=str.length()-1;
+        boolean result=true;
+        while(i<j){
+
+            if(str.charAt(i)!=str.charAt(j)){
+                result=false;
+
+            }
+
+            i++;
+            j--;
+
+        }
+
+        System.out.println(result);
 
     }
 }

@@ -8,12 +8,12 @@ public class SingleNumber {
         Arrays.sort(nums);
 
 
-        for(int i=0;i<nums.length;i+=2){
-            if(i!=i+1){
-                return i;
-            }
-
+        for(int i=0;i<nums.length-1;i+=2){
+        
+            
         }
+
+        
         
     
     }

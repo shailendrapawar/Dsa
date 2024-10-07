@@ -34,9 +34,5 @@ public class DividePlayersIntoTeamsOfEqualSum {
         }
         System.out.println(res);
 
-
-    
-
-
     }
 }

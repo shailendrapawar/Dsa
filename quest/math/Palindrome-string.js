@@ -10,3 +10,13 @@ var isPalindrome = function(x) {
   console.log(result)
   return temp===str
 };
+
+/*
+
+0111100  - aux
+000001001111  - rev
+
+
+    1001111
+
+*/
